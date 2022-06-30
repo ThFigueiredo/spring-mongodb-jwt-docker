@@ -1,7 +1,7 @@
 package com.covid;
 
 import com.covid.models.Role;
-import com.covid.pojo.Roles;
+import com.covid.config.Roles;
 import com.covid.repo.RoleRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;

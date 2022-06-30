@@ -1,4 +1,4 @@
-package com.covid.pojo;
+package com.covid.config;
 
 import java.util.Arrays;
 
