@@ -1,6 +1,6 @@
-package com.covid.repo;
+package com.covid.repository;
 
-import com.covid.models.Role;
+import com.covid.document.Role;
 import org.springframework.data.mongodb.repository.MongoRepository;
 
 public interface RoleRepository extends MongoRepository<Role, String> {

@@ -49,7 +49,7 @@ public class SpringFoxConfig {
 		            .securitySchemes(Lists.newArrayList(apiKey()))
 		            .useDefaultResponseMessages(false);   
 		   return docket.select()                                  
-			          .apis((RequestHandlerSelectors.basePackage( "com.covid.api") ))
+			          .apis((RequestHandlerSelectors.basePackage( "com.covid.controller") ))
 			          .paths(PathSelectors.any())                          
 			          .build(); 
     }
