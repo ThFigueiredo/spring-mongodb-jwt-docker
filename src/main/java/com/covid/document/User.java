@@ -8,6 +8,7 @@ import org.springframework.data.mongodb.core.mapping.DBRef;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import javax.validation.constraints.Email;
+import javax.validation.constraints.Size;
 import java.util.Set;
 
 @Document(collection = "users")
@@ -19,11 +20,12 @@ public class User {
 
     @Email
     private String email;
-
     @CPF
+    @Indexed(unique=true)
     private String cpf;
 
     private String password;
+
     private String fullname;
 
     private Boolean isVaccinated;
