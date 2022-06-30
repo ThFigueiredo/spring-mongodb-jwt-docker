@@ -1,4 +1,4 @@
-package com.covid.models.secure;
+package com.covid.secure;
 
 import com.covid.service.CustomUserDetailsService;
 import org.springframework.beans.factory.annotation.Autowired;

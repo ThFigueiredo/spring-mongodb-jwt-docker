@@ -2,8 +2,8 @@ package com.covid.service;
 
 
 import com.covid.config.ResourceNotFoundException;
-import com.covid.models.User;
-import com.covid.repo.UserRepository;
+import com.covid.document.User;
+import com.covid.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

@@ -1,6 +1,6 @@
-package com.covid.models.secure;
+package com.covid.secure;
 
-import com.covid.models.Role;
+import com.covid.document.Role;
 import com.covid.service.CustomUserDetailsService;
 import io.jsonwebtoken.*;
 import org.springframework.beans.factory.annotation.Autowired;

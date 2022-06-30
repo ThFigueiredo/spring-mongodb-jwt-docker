@@ -1,6 +1,6 @@
-package com.covid.repo;
+package com.covid.repository;
 
-import com.covid.models.User;
+import com.covid.document.User;
 import org.springframework.data.mongodb.repository.MongoRepository;
 
 public interface UserRepository extends MongoRepository<User, String> {

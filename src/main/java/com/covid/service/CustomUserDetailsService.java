@@ -1,9 +1,9 @@
 package com.covid.service;
 
-import com.covid.models.Role;
-import com.covid.models.User;
-import com.covid.repo.RoleRepository;
-import com.covid.repo.UserRepository;
+import com.covid.document.Role;
+import com.covid.document.User;
+import com.covid.repository.RoleRepository;
+import com.covid.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;

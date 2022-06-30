@@ -1,7 +1,7 @@
 package com.covid.service;
 
 
-import com.covid.models.User;
+import com.covid.document.User;
 
 import java.util.List;
 

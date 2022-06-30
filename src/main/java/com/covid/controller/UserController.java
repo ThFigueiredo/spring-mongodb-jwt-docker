@@ -1,6 +1,6 @@
-package com.covid.api;
+package com.covid.controller;
 
-import com.covid.models.User;
+import com.covid.document.User;
 import com.covid.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -8,6 +8,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.util.List;
 
 @RestController
@@ -15,33 +16,33 @@ import java.util.List;
 public class UserController {
 
     @Autowired
-    private UserService personService;
+    private UserService userService;
 
     @GetMapping("")
     @PreAuthorize("hasRole('ADMIN')")
     public ResponseEntity<List<User>> getAllUser(){
-        return ResponseEntity.ok().body(personService.getAllUsers());
+        return ResponseEntity.ok().body(userService.getAllUsers());
     }
 
     @GetMapping("/{id}")
     public ResponseEntity<User> getUserById(@PathVariable String id){
-        return ResponseEntity.ok().body(personService.getUserById(id));
+        return ResponseEntity.ok().body(userService.getUserById(id));
     }
 
 //    @PostMapping("")
-//    public ResponseEntity<User> createUser(@RequestBody User person){
-//        return ResponseEntity.ok().body(this.personService.createUser(person));
+//    public ResponseEntity<User> createUser(@RequestBody User user){
+//        return ResponseEntity.ok().body(this.userService.createUser(user));
 //    }
 
     @PutMapping("/{id}")
-    public ResponseEntity<User> updateUser(@PathVariable String id, @RequestBody User person){
-        person.setId(id);
-        return ResponseEntity.ok().body(this.personService.updateUser(person));
+    public ResponseEntity<User> updateUser(@PathVariable String id, @RequestBody @Valid User user){
+        user.setId(id);
+        return ResponseEntity.ok().body(this.userService.updateUser(user));
     }
 
     @DeleteMapping("/{id}")
     public HttpStatus deleteUser(@PathVariable String id){
-        this.personService.deleteUserById(id);
+        this.userService.deleteUserById(id);
         return HttpStatus.OK;
     }
 }

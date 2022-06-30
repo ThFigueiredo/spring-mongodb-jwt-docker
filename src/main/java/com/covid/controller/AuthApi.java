@@ -1,11 +1,11 @@
-package com.covid.api;
+package com.covid.controller;
 
-import com.covid.models.User;
+import com.covid.document.User;
 import com.covid.config.AuthBody;
 import com.covid.config.Register;
 import com.covid.config.Roles;
-import com.covid.repo.UserRepository;
-import com.covid.models.secure.JwtTokenProvider;
+import com.covid.repository.UserRepository;
+import com.covid.secure.JwtTokenProvider;
 import com.covid.service.CustomUserDetailsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -15,6 +15,7 @@ import org.springframework.security.authentication.UsernamePasswordAuthenticatio
 import org.springframework.security.core.AuthenticationException;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -55,7 +56,7 @@ public class AuthApi {
 
     @SuppressWarnings("rawtypes")
     @PostMapping("/register")
-    public ResponseEntity register(@RequestBody Register register, @RequestParam Roles role) {
+    public ResponseEntity register(@RequestBody @Valid Register register, @RequestParam Roles role) {
         User userExists = userService.findUserByEmail(register.getEmail());
         if (userExists != null) {
             throw new BadCredentialsException("User with username: " + register.getEmail() + " already exists");

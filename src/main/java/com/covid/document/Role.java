@@ -1,4 +1,4 @@
-package com.covid.models;
+package com.covid.document;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.index.IndexDirection;
