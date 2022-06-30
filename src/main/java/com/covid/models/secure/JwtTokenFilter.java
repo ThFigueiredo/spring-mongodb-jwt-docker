@@ -1,4 +1,4 @@
-package com.covid.secure;
+package com.covid.models.secure;
 
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;

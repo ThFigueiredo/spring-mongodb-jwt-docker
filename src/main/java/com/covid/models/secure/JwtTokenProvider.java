@@ -1,4 +1,4 @@
-package com.covid.secure;
+package com.covid.models.secure;
 
 import com.covid.models.Role;
 import com.covid.service.CustomUserDetailsService;

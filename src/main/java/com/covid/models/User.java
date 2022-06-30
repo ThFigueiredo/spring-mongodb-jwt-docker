@@ -17,6 +17,28 @@ public class User {
     private String email;
     private String password;
     private String fullname;
+
+    private Boolean isVaccinated;
+
+    public Boolean getVaccinated() {
+        return isVaccinated;
+    }
+
+    public void setVaccinated(Boolean vaccinated) {
+        isVaccinated = vaccinated;
+    }
+
+    public String getCpf() {
+        return cpf;
+    }
+
+    public void setCpf(String cpf) {
+        this.cpf = cpf;
+    }
+
+    private String cpf;
+
+
     private boolean enabled;
     @DBRef
     private Set<Role> roles;

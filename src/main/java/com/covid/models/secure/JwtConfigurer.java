@@ -1,4 +1,4 @@
-package com.covid.secure;
+package com.covid.models.secure;
 
 import org.springframework.security.config.annotation.SecurityConfigurerAdapter;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;

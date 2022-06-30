@@ -1,11 +1,11 @@
 package com.covid.api;
 
 import com.covid.models.User;
-import com.covid.pojo.AuthBody;
-import com.covid.pojo.Register;
-import com.covid.pojo.Roles;
+import com.covid.config.AuthBody;
+import com.covid.config.Register;
+import com.covid.config.Roles;
 import com.covid.repo.UserRepository;
-import com.covid.secure.JwtTokenProvider;
+import com.covid.models.secure.JwtTokenProvider;
 import com.covid.service.CustomUserDetailsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
